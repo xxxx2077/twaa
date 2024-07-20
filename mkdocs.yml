@@ -1,0 +1,5 @@
+site_name: 逸仙东华新生指南
+
+nav:
+  - 百问百答: Q&A.md
+  - Copyright: copyright.md
