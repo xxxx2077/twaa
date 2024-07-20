@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  twaa_manual:
+    # for deployments
+    image: manual:v0.1.0
+    container_name: twaa_manual
+    build:
+      context: .   # 指定Dockerfile所在的目录
+      dockerfile: Dockerfile  # 指定要使用的Dockerfile
+    ports:
+      # for deployments
+      - 4399:80  # 映射容器端口80到主机的4399端口
+    restart: always  # 容器退出时总是重启容器
+    environment:
+      - TZ=Asia/Shanghai
